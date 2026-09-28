@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[text()=\"Interactions\"]\"}\n  (Session info: chrome=154.0.8037.57)",
+  "stacktrace": "\tchromedriver!GetHandleVerifier [0x7ff7f148be05+5a55]\n\tchromedriver!(No symbol) [0x7ff7f13b3230]\n\tchromedriver!(No symbol) [0x7ff7f11d6e4d]\n\tchromedriver!(No symbol) [0x7ff7f123266d]\n\tchromedriver!(No symbol) [0x7ff7f123292c]\n\tchromedriver!(No symbol) [0x7ff7f12859e7]\n\tchromedriver!(No symbol) [0x7ff7f128267a]\n\tchromedriver!(No symbol) [0x7ff7f1224412]\n\tchromedriver!(No symbol) [0x7ff7f1225223]\n\tchromedriver!GetHandleVerifier [0x7ff7f189b1d1+414e21]\n\tchromedriver!GetHandleVerifier [0x7ff7f18c51fb+43ee4b]\n\tchromedriver!GetHandleVerifier [0x7ff7f18b96ce+43331e]\n\tchromedriver!GetHandleVerifier [0x7ff7f159015e+109dae]\n\tchromedriver!(No symbol) [0x7ff7f13c0e85]\n\tchromedriver!(No symbol) [0x7ff7f13bbe14]\n\tchromedriver!(No symbol) [0x7ff7f13bbfa4]\n\tchromedriver!(No symbol) [0x7ff7f13a6b0c]\n\tKERNEL32!BaseThreadInitThunk [0x7ffc56e5cdf7+17]\n\tntdll!RtlUserThreadStart [0x7ffc587fee4c+2c]\n"
+}

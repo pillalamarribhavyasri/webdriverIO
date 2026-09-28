@@ -1,0 +1,45 @@
+{
+  "actions": [
+    {
+      "id": "pointer3",
+      "type": "pointer",
+      "parameters": {
+        "pointerType": "mouse"
+      },
+      "actions": [
+        {
+          "type": "pointerMove",
+          "button": 0,
+          "x": 0,
+          "y": 0,
+          "duration": 0,
+          "origin": {
+            "element-6066-11e4-a52e-4f735466cecf": "f.E0D77A77C91C1941DF5DEB06C67BB622.d.364FC1C81BEDA3C584AD754EBACE34F7.e.564"
+          }
+        },
+        {
+          "type": "pointerDown",
+          "button": 0
+        },
+        {
+          "type": "pause",
+          "duration": 10
+        },
+        {
+          "type": "pointerMove",
+          "button": 0,
+          "x": 0,
+          "y": 0,
+          "duration": 10,
+          "origin": {
+            "element-6066-11e4-a52e-4f735466cecf": "f.E0D77A77C91C1941DF5DEB06C67BB622.d.364FC1C81BEDA3C584AD754EBACE34F7.e.565"
+          }
+        },
+        {
+          "type": "pointerUp",
+          "button": 0
+        }
+      ]
+    }
+  ]
+}

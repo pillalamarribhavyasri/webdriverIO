@@ -1,0 +1,3 @@
+invalid selector: WebDriverError: invalid selector: Unable to locate an element with the xpath expression //a[text()="Interactions"] because of the following error:
+NotSupportedError: Failed to execute 'evaluate' on 'Document': The node provided is '#document-fragment', which is not a valid context node type.
+  (Session info: chrome=154.0.8037.57) when running "element/f.83712944E47AE76572176F78927D6ABB.d.7DCD6AD5DF46783F272775659A2A3BC0.e.34/element" with method "POST"
