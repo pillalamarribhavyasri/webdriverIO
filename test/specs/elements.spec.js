@@ -7,30 +7,18 @@ describe('WebdriverIO Element Practice', () => {
 
        
         // 1. Find single element - $
-        // =========================
 
         const formAuthentication = await $('a[href="/login"]');
-
-        // =========================
         // 2. Check element exists
-        // =========================
-
         console.log('Exists:',await formAuthentication.isExisting());
         // 3. Click
         await formAuthentication.click();
-
-        // =========================
         // 4. Find username/password
-        // =========================
-
         const username = await $('#username');
         const password = await $('#password');
         const loginButton = await $('button[type="submit"]');
 
-        // =========================
         // 5. Wait for element
-        // =========================
-
         await username.waitForDisplayed();
         await password.waitForDisplayed();
 
