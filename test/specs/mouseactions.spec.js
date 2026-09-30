@@ -22,7 +22,7 @@ describe("mouse actions", () => {
         // drag and drop
         const sour = await $('#draggable')
         const targ = await $('#droppable')
-
+        
         await sour.dragAndDrop(targ)
         await browser.pause(2000)
     })

@@ -5,7 +5,7 @@ describe('WebdriverIO Element Practice', () => {
         // Open application
         await browser.url('https://the-internet.herokuapp.com/');
 
-        // =========================
+       
         // 1. Find single element - $
         // =========================
 
@@ -15,10 +15,7 @@ describe('WebdriverIO Element Practice', () => {
         // 2. Check element exists
         // =========================
 
-        console.log(
-            'Exists:',
-            await formAuthentication.isExisting()
-        );
+        console.log('Exists:',await formAuthentication.isExisting());
         // 3. Click
         await formAuthentication.click();
 
@@ -38,44 +35,25 @@ describe('WebdriverIO Element Practice', () => {
         await password.waitForDisplayed();
 
         // 6. Check displayed
-      
-        console.log(
-            'Username displayed:',
-            await username.isDisplayed()
-        );
+    
+        console.log('Username displayed:',await username.isDisplayed());
 
         // 7. Check enabled
-       
-        console.log(
-            'Username enabled:',
-            await username.isEnabled()
-        );
+        console.log('Username enabled:',await username.isEnabled());
 
       
         // 8. Get attribute
         const usernameType = await username.getAttribute('type');
+        console.log('Username type:',usernameType);
 
-        console.log(
-            'Username type:',
-            usernameType
-        );
-
-       
         // 9. Set value
       
-
         await username.setValue('tomsmith');
         await password.setValue('SuperSecretPassword!');
 
         // 10. Get property
-
-        const enteredUsername =
-            await username.getProperty('value');
-
-        console.log(
-            'Entered username:',
-            enteredUsername
-        );
+        const enteredUsername =await username.getProperty('value');
+        console.log('Entered username:',enteredUsername);
 
       
         // 11. Clear value
@@ -89,26 +67,16 @@ describe('WebdriverIO Element Practice', () => {
         const flashMessage = await $('#flash');
 
         await flashMessage.waitForDisplayed();
-
         const message = await flashMessage.getText();
-
-        console.log(
-            'Message:',
-            message
-        );
+        console.log('Message:',message);
 
         // =========================
         // 15. Find multiple elements
         // =========================
 
         await browser.url('https://the-internet.herokuapp.com/');
-
         const links = await $$('a');
-
-        console.log(
-            'Number of links:',
-            links.length
-        );
+        console.log('Number of links:',links.length);
 
         // =========================
         // 16. Loop through elements
@@ -117,30 +85,20 @@ describe('WebdriverIO Element Practice', () => {
         for (const link of links) {
 
             const text = await link.getText();
-
-            console.log(
-                'Link text:',
-                text
-            );
+            console.log('Link text:',text);
         }
 
         // =========================
         // 17. Element inside another element
         // =========================
 
-        await browser.url(
-            'https://the-internet.herokuapp.com/login'
-        );
+        await browser.url('https://the-internet.herokuapp.com/login');
 
         const loginForm = await $('form');
 
-        const usernameInsideForm =
-            await loginForm.$('#username');
+        const usernameInsideForm =await loginForm.$('#username');
 
-        console.log(
-            'Username exists inside form:',
-            await usernameInsideForm.isExisting()
-        );
+        console.log('Username exists inside form:',await usernameInsideForm.isExisting());
 
         await usernameInsideForm.setValue('tomsmith');
 
@@ -148,60 +106,35 @@ describe('WebdriverIO Element Practice', () => {
         // 18. Checkbox practice
         // =========================
 
-        await browser.url(
-            'https://the-internet.herokuapp.com/checkboxes'
-        );
+        await browser.url('https://the-internet.herokuapp.com/checkboxes');
 
-        const checkboxes = await $$(
-            'input[type="checkbox"]'
-        );
+        const checkboxes = await $$('input[type="checkbox"]');
 
-        console.log(
-            'Number of checkboxes:',
-            checkboxes.length
-        );
+        console.log('Number of checkboxes:',checkboxes.length);
 
         const firstCheckbox = checkboxes[0];
 
         // Check current state
-        console.log(
-            'Selected:',
-            await firstCheckbox.isSelected()
-        );
+        console.log('Selected:',await firstCheckbox.isSelected());
 
         // Click checkbox
         await firstCheckbox.click();
-
-        console.log(
-            'Selected after click:',
-            await firstCheckbox.isSelected()
-        );
+        console.log('Selected after click:',await firstCheckbox.isSelected());
 
         // =========================
         // 19. Dropdown practice
         // =========================
 
-        await browser.url(
-            'https://the-internet.herokuapp.com/dropdown'
-        );
-
+        await browser.url('https://the-internet.herokuapp.com/dropdown');
         const dropdown = await $('#dropdown');
 
         // Select by visible text
         await dropdown.selectByVisibleText('Option 1');
 
-        console.log(
-            'Dropdown selected'
-        );
+        console.log('Dropdown selected');
 
         // Select by attribute
-        await dropdown.selectByAttribute(
-            'value',
-            '2'
-        );
-
-        console.log(
-            'Dropdown changed to Option 2'
-        );
+        await dropdown.selectByAttribute('value','2');
+        console.log('Dropdown changed to Option 2');
     });
 });
